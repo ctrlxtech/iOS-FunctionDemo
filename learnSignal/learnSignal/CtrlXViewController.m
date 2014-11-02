@@ -2,7 +2,7 @@
 //  CtrlXViewController.m
 //  learnSignal
 //
-//  Created by Ming Xu on 9/17/14.
+//  Created by Ming Xu on 9/18/14.
 //  Copyright (c) 2014 body7. All rights reserved.
 //
 
@@ -14,7 +14,6 @@
 
 @implementation CtrlXViewController
 
-@synthesize learnOrUseSwitch = _learnOrUseSwitch;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -27,16 +26,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)turnUp:(id)sender {
-  
-}
-
-- (IBAction)turnDown:(id)sender {
-}
-
-- (IBAction)volumeIncrease:(id)sender {
-}
-
-- (IBAction)volumeDecrease:(id)sender {
-}
 @end
