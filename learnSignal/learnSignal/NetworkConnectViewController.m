@@ -35,6 +35,11 @@ NSString *ip;
     
     [inputStream setDelegate:self];
     [outputStream setDelegate:self];
+    //NSString *response  = [NSString stringWithFormat:@"connect successfull!"];
+    //NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
+    //[outputStream write:[data bytes] maxLength:[data length]];
+    [inputStream open];
+    [outputStream open];
     
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -84,7 +89,11 @@ NSString *ip;
 
 - (IBAction)connectDevice:(id)sender {
     ip = _ipAddressTextField.text;
+    NSLog(@"%@",ip);
     [self initNetworkConnection];
+    NSString *response  = [NSString stringWithFormat:@"connect successfull!"];
+    NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
+    [outputStream write:[data bytes] maxLength:[data length]];
     [self performSegueWithIdentifier: @"pushToLearnSignalSegue" sender: self];
 }
 @end
